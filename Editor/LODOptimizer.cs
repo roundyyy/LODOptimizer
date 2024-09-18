@@ -72,6 +72,9 @@ public class LODOptimizer : EditorWindow
     private string[] shaderNames;
     private int selectedShaderIndex = -1;
 
+    // Scroll position for the ReorderableList
+    private Vector2 listScrollPos;
+
     [MenuItem("Tools/LOD Optimizer")]
     public static void ShowWindow()
     {
@@ -215,7 +218,16 @@ public class LODOptimizer : EditorWindow
         GUILayout.EndHorizontal();
 
         GUILayout.Space(5);
+
+        // Limit the ReorderableList display to 10 items and add a scrollbar
+        int maxVisibleItems = 10;
+        float elementHeight = reorderableList.elementHeight;
+        float headerHeight = reorderableList.headerHeight;
+        float listHeight = headerHeight + elementHeight * maxVisibleItems;
+
+        listScrollPos = EditorGUILayout.BeginScrollView(listScrollPos, GUILayout.Height(listHeight));
         reorderableList.DoLayoutList();
+        EditorGUILayout.EndScrollView();
 
         GUILayout.Space(10);
 
