@@ -31,7 +31,7 @@
    - Place LODOptimizer inside the Editor folder (if you don't have Editor folder, just creat one)
 
 3. **Access the Tool:**
-   - In Unity, go to `Tools > LOD Optimizer` to open the optimization window.
+   - In Unity, go to `Tools > Roundy > LOD Optimizer` to open the optimization window.
 
 ## Usage
 
