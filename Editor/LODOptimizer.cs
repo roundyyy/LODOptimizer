@@ -75,7 +75,7 @@ public class LODOptimizer : EditorWindow
     // Scroll position for the ReorderableList
     private Vector2 listScrollPos;
 
-    [MenuItem("Tools/LOD Optimizer")]
+    [MenuItem("Tools/Roundy/LOD Optimizer")]
     public static void ShowWindow()
     {
         GetWindow<LODOptimizer>("LOD Optimizer v0.1");
